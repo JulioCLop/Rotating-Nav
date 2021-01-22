@@ -1,0 +1,163 @@
+@import url('https://font.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #333;
+    color: #222;
+}
+
+.container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height:100vh;
+    padding: 50px;
+
+
+    &.show-nav{
+        transform: rotate(-20deg);
+
+        
+
+        &.show-nav + nav li{
+            transform: translateX(0);
+            transition-delay: 0.3s ;
+        }
+        
+    }
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+
+    .circle{
+        background-color: #ff7979;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: relative;
+        transition: transform 0.5s linear;
+
+        button{
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            left: 50%;
+            height: 100px;
+            background: transparent;
+            border: 0;
+            font-size: 26px;
+            color: white;
+
+            &:focus{
+                outline: none;
+            }
+
+            &#open{
+                left: 60%;
+            }
+
+            &#close{
+                top: 60%;
+                transform: rotate(90deg);
+                transform-origin: top left;
+            }
+        }
+    }
+}
+
+
+  
+
+        nav{
+        position: fixed;
+        bottom: 40px;
+        left: 0;
+        z-index: 100;
+                ul{
+                padding-left: 30px;
+                list-style-type: none; 
+                li{
+                text-transform: uppercase;
+                margin: 40px 0;
+                transform:translateX(-100%);
+                transition: 0.3s ease-in;
+                &:nth-child(2){
+                    margin-left: 15px;
+                    transform: translateX(-150%);
+                }
+                &:nth-child(3){
+                    margin-left: 30px;
+                    transform:translateX(-200px)
+                }
+                i{
+                    color: white;
+                    padding: 5px;
+                    font-size: 20px !important;
+                    margin-right: 10px;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                   
+                }
+
+
+           }
+       }
+
+
+
+
+}
+
+
+
+
+.content{
+        max-width: 1000px;
+        margin: 50px auto;
+
+        & h1{
+          margin: 0;
+         
+        }
+        & small{
+            color: #555;
+            font-style: italic;
+        }
+
+        & p{
+            color: #333;
+            line-height: 1.5;
+        
+        }
+
+        & h3{
+            text-align: center;
+            font-size: 20px;
+        }
+
+    img{
+        max-width: 100%;
+       
+    
+    }
+
+
+}
+
+
